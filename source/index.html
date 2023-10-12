@@ -4,10 +4,88 @@
     <meta charset="UTF-8">
     <title>HTML Academy: Drink2Go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="fonts/montserrat-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-semibold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
-    <header class="header" data-test="header">Шапка</header>
+    <div class="page__wrapper">
+      <header class="header" data-test="header">
+        <div class="header__logo-container">
+          <a class="header__logo">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="images/logo/logo-drink2go.svg" width="170" height="36">
+              <source media="(min-width: 768px)" srcset="images/logo/logo-d2g.svg" width="82" height="36">
+              <img src="images/logo/logo-2.svg" width="32" height="36" alt="Drink2Go.">
+            </picture>
+          </a>
+          <span class="header__text">Интернет-магазин<br>кофейных напитков</span>
+        </div>
+
+        <nav class="nav nav--closed">
+          <button class="nav__toggle js-toggle-button" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+
+          <ul class="nav__list">
+            <li class="nav__item nav__item--active">
+              <a class="nav__link">Главная</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Каталог</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Доставка</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">О нас</a>
+            </li>
+          </ul>
+        </nav>
+
+        <ul class="header__list">
+          <li class="header__item">
+            <a class="header__icon header__icon--user" href="#">
+              <span class="header__icon-text">Войти</span>
+            </a>
+          </li>
+          <li class="header__item">
+            <a class="header__icon header__icon--union" href="#">
+              <span class="header__icon-text">Корзина</span>
+            </a>
+          </li>
+        </ul>
+      </header>
+
+      <main class="page__main">
+        <h1 class="visually-hidden">Drink2Go</h1>
+        <section class="hero" data-test="hero">Слайдер</section>
+        <section class="features" data-test="features">Преимущества</section>
+        <section class="catalog" data-test="catalog">Каталог</section>
+        <section class="map" data-test="map">
+          <h2 class="visually-hidden">Карта</h2>
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="images/map/map-desktop@1x.webp 1x, images/map/map-desktop@2x.webp 2x" width="1440" height="540">
+            <source type="image/webp" media="(min-width: 768px)" srcset="images/map/map-tablet@1x.webp 1x, images/map/map-tablet@2x.webp 2x" width="768" height="480">
+            <source type="image/webp" srcset="images/map/map-mobile@1x.webp 1x, images/map/map-mobile@2x.webp 2x" width="320" height="420">
+            <source media="(min-width: 1440px)" srcset="images/map/map-desktop@1x.jpg 1x, images/map/map-desktop@2x.jpg 2x" width="1440" height="540">
+            <source media="(min-width: 768px)" srcset="images/map/map-tablet@1x.jpg 1x, images/map/map-tablet@2x.jpg 2x" width="768" height="480">
+            <img src="images/map/map-mobile@1x.jpg" srcset="images/map/map-mobile@2x.jpg 2x" width="320" height="420" alt="Карта.">
+          </picture>
+        </section>
+      </main>
+
+      <footer class="footer" data-test="footer">
+        <a class="footer__logo">
+          <picture>
+            <source media="(min-width: 768px)" srcset="images/logo/logo-drink2go.svg" width="170" height="36">
+            <img src="images/logo/logo-d2g.svg" width="82" height="36" alt="Drink2Go.">
+          </picture>
+        </a>
+    </footer>
+    </div>
 
     <script src="js/script.js" defer></script>
   </body>
