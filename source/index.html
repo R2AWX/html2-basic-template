@@ -8,7 +8,51 @@
   </head>
   <body class="page__body">
     <div class="page__wrapper">
-      <header class="header" data-test="header">Шапка</header>
+      <header class="header" data-test="header">
+        <a class="header__logo">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="images/logo-drink2go.svg" width="170" height="36">
+            <source media="(min-width: 768px)" srcset="images/logo-d2g.svg" width="82" height="36">
+            <img src="images/logo-2.svg" width="32" height="36" alt="Drink2Go.">
+          </picture>
+        </a>
+
+        <span class="header__text">Интернет-магазин<br>кофейных напитков</span>
+
+        <nav class="nav nav--closed">
+          <button class="nav__toggle js-toggle-button" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+
+          <ul class="nav__list">
+            <li class="nav__item nav__item--active">
+              <a class="nav__link">Главная</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Каталог</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Доставка</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">О нас</a>
+            </li>
+          </ul>
+        </nav>
+
+        <ul class="header__list">
+          <li class="header__item">
+            <a class="header__link" href="#">
+              <span class="header__icon-text">Войти</span>
+            </a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#">
+              <span class="header__icon-text">Корзина</span>
+            </a>
+          </li>
+        </ul>
+      </header>
 
       <main class="page__main">
         <h1 class="visually-hidden">Drink2Go</h1>
@@ -18,7 +62,14 @@
         <section class="map" data-test="map">Карта</section>
       </main>
 
-      <footer class="footer" data-test="footer">Подвал</footer>
+      <footer class="footer" data-test="footer">
+        <a class="footer__logo">
+          <picture>
+            <source media="(min-width: 768px)" srcset="images/logo-drink2go.svg" width="170" height="36">
+            <img src="images/logo-d2g.svg" width="82" height="36" alt="Drink2Go.">
+          </picture>
+        </a>
+    </footer>
     </div>
 
     <script src="js/script.js" defer></script>

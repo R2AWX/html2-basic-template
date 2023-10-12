@@ -1,3 +1,35 @@
 .header {
+  display: flex;
   position: relative;
+}
+
+.header__logo {
+  padding: 12px 20px;
+  height: 36px;
+
+  @media (min-width: $tablet-width) {
+    padding: 22px 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 40px;
+  }
+}
+
+.header__text {
+  margin-top: 24px;
+
+  @include link-text;
+
+  @media (max-width: $tablet-width-only) {
+    display: none;
+  }
+}
+
+.header__list {
+  @include no-bullet;
+}
+
+.header__link {
+  @include link-decoration;
 }
