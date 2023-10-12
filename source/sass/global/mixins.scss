@@ -20,12 +20,11 @@
 }
 
 @mixin link-decoration {
+  @include link-text;
   font-weight: 500;
   text-transform: uppercase;
   text-decoration: none;
   color: inherit;
-
-  @include link-text;
 }
 
 @mixin button {

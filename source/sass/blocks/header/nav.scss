@@ -6,6 +6,7 @@
 
 .nav__list {
   @include no-bullet;
+  display: flex;
 }
 
 .nav__link {

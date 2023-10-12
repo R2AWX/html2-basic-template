@@ -12,6 +12,7 @@
 }
 
 .page__wrapper {
+  @include regular-text-mobile;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -21,12 +22,9 @@
   background-color: $base-white;
   box-shadow: 0 0 15px $base-grey;
 
-  @include regular-text-mobile;
-
   @media (min-width: $tablet-width) {
-    width: $tablet-width;
-
     @include regular-text-tablet;
+    width: $tablet-width;
   }
 
   @media (min-width: $desktop-width) {

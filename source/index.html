@@ -9,15 +9,16 @@
   <body class="page__body">
     <div class="page__wrapper">
       <header class="header" data-test="header">
-        <a class="header__logo">
-          <picture>
-            <source media="(min-width: 1440px)" srcset="images/logo/logo-drink2go.svg" width="170" height="36">
-            <source media="(min-width: 768px)" srcset="images/logo/logo-d2g.svg" width="82" height="36">
-            <img src="images/logo/logo-2.svg" width="32" height="36" alt="Drink2Go.">
-          </picture>
-        </a>
-
-        <span class="header__text">Интернет-магазин<br>кофейных напитков</span>
+        <div class="header__logo-container">
+          <a class="header__logo">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="images/logo/logo-drink2go.svg" width="170" height="36">
+              <source media="(min-width: 768px)" srcset="images/logo/logo-d2g.svg" width="82" height="36">
+              <img src="images/logo/logo-2.svg" width="32" height="36" alt="Drink2Go.">
+            </picture>
+          </a>
+          <span class="header__text">Интернет-магазин<br>кофейных напитков</span>
+        </div>
 
         <nav class="nav nav--closed">
           <button class="nav__toggle js-toggle-button" type="button">
@@ -42,12 +43,12 @@
 
         <ul class="header__list">
           <li class="header__item">
-            <a class="header__link" href="#">
+            <a class="header__icon header__icon--user" href="#">
               <span class="header__icon-text">Войти</span>
             </a>
           </li>
           <li class="header__item">
-            <a class="header__link" href="#">
+            <a class="header__icon header__icon--union" href="#">
               <span class="header__icon-text">Корзина</span>
             </a>
           </li>
