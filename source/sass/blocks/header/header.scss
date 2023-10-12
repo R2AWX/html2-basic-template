@@ -61,7 +61,8 @@
   box-sizing: border-box;
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:active {
     color: $base-primary;
 
     &::before {
@@ -71,11 +72,6 @@
 
   &:active {
     background-color: $base-secondary;
-    color: $base-primary;
-
-    &::before {
-      background-color: $base-primary;
-    }
   }
 
   @media (min-width: $tablet-width) {
