@@ -11,9 +11,9 @@
       <header class="header" data-test="header">
         <a class="header__logo">
           <picture>
-            <source media="(min-width: 1440px)" srcset="images/logo-drink2go.svg" width="170" height="36">
-            <source media="(min-width: 768px)" srcset="images/logo-d2g.svg" width="82" height="36">
-            <img src="images/logo-2.svg" width="32" height="36" alt="Drink2Go.">
+            <source media="(min-width: 1440px)" srcset="images/logo/logo-drink2go.svg" width="170" height="36">
+            <source media="(min-width: 768px)" srcset="images/logo/logo-d2g.svg" width="82" height="36">
+            <img src="images/logo/logo-2.svg" width="32" height="36" alt="Drink2Go.">
           </picture>
         </a>
 
@@ -59,14 +59,24 @@
         <section class="hero" data-test="hero">Слайдер</section>
         <section class="features" data-test="features">Преимущества</section>
         <section class="catalog" data-test="catalog">Каталог</section>
-        <section class="map" data-test="map">Карта</section>
+        <section class="map" data-test="map">
+          <h2 class="visually-hidden">Карта</h2>
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="images/map/map-desktop@1x.webp 1x, images/map/map-desktop@2x.webp 2x" width="1440" height="540">
+            <source type="image/webp" media="(min-width: 768px)" srcset="images/map/map-tablet@1x.webp 1x, images/map/map-tablet@2x.webp 2x" width="768" height="480">
+            <source type="image/webp" srcset="images/map/map-mobile@1x.webp 1x, images/map/map-mobile@2x.webp 2x" width="320" height="420">
+            <source media="(min-width: 1440px)" srcset="images/map/map-desktop@1x.jpg 1x, images/map/map-desktop@2x.jpg 2x" width="1440" height="540">
+            <source media="(min-width: 768px)" srcset="images/map/map-tablet@1x.jpg 1x, images/map/map-tablet@2x.jpg 2x" width="768" height="480">
+            <img src="images/map/map-mobile@1x.jpg" srcset="images/map/map-mobile@2x.jpg 2x" width="320" height="420" alt="Карта.">
+          </picture>
+        </section>
       </main>
 
       <footer class="footer" data-test="footer">
         <a class="footer__logo">
           <picture>
-            <source media="(min-width: 768px)" srcset="images/logo-drink2go.svg" width="170" height="36">
-            <img src="images/logo-d2g.svg" width="82" height="36" alt="Drink2Go.">
+            <source media="(min-width: 768px)" srcset="images/logo/logo-drink2go.svg" width="170" height="36">
+            <img src="images/logo/logo-d2g.svg" width="82" height="36" alt="Drink2Go.">
           </picture>
         </a>
     </footer>
