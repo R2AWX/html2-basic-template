@@ -1,12 +1,12 @@
-const navMain = document.querySelector('.nav');
-const navToggle = document.querySelector('.nav__toggle');
+const navMain = document.querySelector('.header-nav');
+const navToggle = document.querySelector('.header-nav__toggle');
 
 navToggle.addEventListener('click', () => {
-  if (navMain.classList.contains('nav--closed')) {
-    navMain.classList.remove('nav--closed');
-    navMain.classList.add('nav--opened');
+  if (navMain.classList.contains('header-nav--closed')) {
+    navMain.classList.remove('header-nav--closed');
+    navMain.classList.add('header-nav--opened');
   } else {
-    navMain.classList.add('nav--closed');
-    navMain.classList.remove('nav--opened');
+    navMain.classList.add('header-nav--closed');
+    navMain.classList.remove('header-nav--opened');
   }
 });

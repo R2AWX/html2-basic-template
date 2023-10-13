@@ -1,4 +1,4 @@
-.nav__toggle {
+.header-nav__toggle {
   position: absolute;
   top: 0;
   right: 0;
@@ -14,7 +14,7 @@
   }
 }
 
-.nav__toggle::after {
+.header-nav__toggle::after {
   content: "";
   position: absolute;
   top: 0;
@@ -27,21 +27,21 @@
   background-color: $base-black;
 }
 
-.nav--closed .nav__toggle::after {
+.header-nav--closed .header-nav__toggle::after {
   mask-image: url("../../images/icons/stack.svg#menu");
   mask-size: 16px 12px;
 }
 
-.nav--opened .nav__toggle::after {
+.header-nav--opened .header-nav__toggle::after {
   mask-image: url("../../images/icons/stack.svg#stroke");
   mask-size: 12px 12px;
 }
 
-.nav__toggle:active {
+.header-nav__toggle:active {
   background-color: $base-secondary;
 }
 
-.nav__list {
+.header-nav__list {
   @include no-bullet;
   display: flex;
   align-items: center;
@@ -60,7 +60,7 @@
   }
 }
 
-.nav__link {
+.header-nav__link {
   @include link-decoration;
   display: flex;
   align-items: center;
@@ -91,12 +91,12 @@
 }
 
 @media (min-width: $tablet-width) {
-  .nav__item--active {
+  .header-nav__item--active {
     position: relative;
     color: $base-primary;
   }
 
-  .nav__item--active::after {
+  .header-nav__item--active::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -108,11 +108,11 @@
 }
 
 @media (max-width: $mobile-width-only) {
-  .nav--closed .nav__list {
+  .header-nav--closed .header-nav__list {
     display: none;
   }
 
-  .nav--opened .nav__list {
+  .header-nav--opened .header-nav__list {
     z-index: 1;
     position: absolute;
     top: 60px;

@@ -24,23 +24,23 @@
           <span class="header__text">Интернет-магазин<br>кофейных напитков</span>
         </div>
 
-        <nav class="nav nav--closed">
-          <button class="nav__toggle js-toggle-button" type="button">
+        <nav class="header-nav header-nav--closed">
+          <button class="header-nav__toggle js-toggle-button" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
 
-          <ul class="nav__list">
-            <li class="nav__item nav__item--active">
-              <a class="nav__link">Главная</a>
+          <ul class="header-nav__list">
+            <li class="header-nav__item header-nav__item--active">
+              <a class="header-nav__link">Главная</a>
             </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#">Каталог</a>
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="#">Каталог</a>
             </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#">Доставка</a>
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="#">Доставка</a>
             </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#">О нас</a>
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="#">О нас</a>
             </li>
           </ul>
         </nav>
@@ -52,7 +52,7 @@
             </a>
           </li>
           <li class="header__item">
-            <a class="header__icon header__icon--union" href="#">
+            <a class="header__icon header__icon--basket" href="#">
               <span class="header__icon-text">Корзина</span>
             </a>
           </li>
@@ -62,8 +62,11 @@
       <main class="page__main">
         <h1 class="visually-hidden">Drink2Go</h1>
         <section class="hero" data-test="hero">Слайдер</section>
+
         <section class="features" data-test="features">Преимущества</section>
+
         <section class="catalog" data-test="catalog">Каталог</section>
+
         <section class="map" data-test="map">
           <h2 class="visually-hidden">Карта</h2>
           <picture>
@@ -78,12 +81,81 @@
       </main>
 
       <footer class="footer" data-test="footer">
-        <a class="footer__logo">
-          <picture>
-            <source media="(min-width: 768px)" srcset="images/logo/logo-drink2go.svg" width="170" height="36">
-            <img src="images/logo/logo-d2g.svg" width="82" height="36" alt="Drink2Go.">
-          </picture>
-        </a>
+        <div class="footer__logo-container">
+          <a class="footer__logo">
+            <picture>
+              <source media="(min-width: 768px)" srcset="images/logo/logo-drink2go.svg" width="170" height="36">
+              <img src="images/logo/logo-d2g.svg" width="82" height="36" alt="Drink2Go.">
+            </picture>
+          </a>
+          <span class="footer__text">Интернет-магазин кофейных напитков</span>
+          <div class="footer__social social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link" href="https://vk.com/htmlacademy">
+                  <span class="visually-hidden">Вконтакте</span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="https://ru.pinterest.com/keks_is_html_academy">
+                  <span class="visually-hidden">Пинтерест</span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="https://ok.ru/htmlacademy">
+                  <span class="visually-hidden">Одноклассники</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <nav class="footer-nav">
+          <div class="footer-nav__container">
+            <h3 class="footer-nav__title">Интернет-магазин</h3>
+            <ul class="footer-nav__list">
+              <li class="footer-nav__item">
+                <a class="footer-nav__link" href="#">Каталог</a>
+              </li>
+              <li class="footer-nav__item">
+                <a class="footer-nav__link" href="#">Доставка</a>
+              </li>
+              <li class="footer-nav__item">
+                <a class="footer-nav__link" href="#">Способы оплаты</a>
+              </li>
+              <li class="footer-nav__item">
+                <a class="footer-nav__link" href="#">О нас</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-nav__container">
+            <h3 class="footer-nav__title">Медиа</h3>
+            <ul class="footer-nav__list">
+              <li class="footer-nav__item">
+                <a class="footer-nav__link" href="#">Блог</a>
+              </li>
+              <li class="footer-nav__item">
+                <a class="footer-nav__link" href="#">Информация для СМИ</a>
+              </li>
+              <li class="footer-nav__item">
+                <a class="footer-nav__link" href="#">Правовая информация</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-nav__container">
+            <h3 class="footer-nav__title">Контакты</h3>
+            <ul class="footer-nav__list">
+              <li class="footer-nav__item">
+                <span class="footer-nav__icon footer-nav__icon--address">Санкт-Петербург, набережная реки Карповки, дом 5</span>
+              </li>
+              <li class="footer-nav__item">
+                <a class="footer-nav__icon footer-nav__icon--phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <p class="footer__developer">Разработано в <a class="footer__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></p>
     </footer>
     </div>
 
