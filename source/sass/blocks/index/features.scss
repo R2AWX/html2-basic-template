@@ -1,0 +1,151 @@
+.features {
+  padding: 50px 20px 60px;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 30px 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 40px 120px;
+  }
+}
+
+.features__header {
+  @include link-text;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: $base-primary;
+  margin: 0;
+}
+
+.features__slogan {
+  @include heading-text-medium;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 36px;
+
+  @media (min-width: $tablet-width) {
+    @include heading-text-big;
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 80px;
+  }
+}
+
+.features__list {
+  @include no-bullet;
+  display: grid;
+  row-gap: 32px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.features__item {
+  position: relative;
+  padding-top: 66px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    padding-left: 72px;
+    text-align: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 76px;
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
+.features__item-header {
+  @include heading-text-small;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    @include heading-text-medium;
+  }
+}
+
+.features__item::before,
+.features__item::after {
+  content: "";
+  position: absolute;
+  height: 52px;
+  margin: auto;
+  mask-position: center;
+  mask-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    mask-position: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    mask-position: center;
+  }
+}
+
+.features__item::before {
+  top: 4px;
+  right: 0;
+  left: 4px;
+  background-color: $base-secondary;
+}
+
+.features__item::after {
+  top: 0;
+  right: 4px;
+  left: 0;
+  background-color: $base-primary;
+}
+
+.features__item--speed::before {
+  mask-image: url("../../images/icons/stack.svg#speed-background");
+  mask-size: 46px 52px;
+}
+
+.features__item--speed::after {
+  mask-image: url("../../images/icons/stack.svg#speed");
+  mask-size: 46px 52px;
+}
+
+.features__item--fit::before {
+  mask-image: url("../../images/icons/stack.svg#fit-background");
+  mask-size: 48px 52px;
+}
+
+.features__item--fit::after {
+  mask-image: url("../../images/icons/stack.svg#fit");
+  mask-size: 48px 52px;
+}
+
+.features__item--energy::before {
+  mask-image: url("../../images/icons/stack.svg#energy-background");
+  mask-size: 38px 52px;
+}
+
+.features__item--energy::after {
+  mask-image: url("../../images/icons/stack.svg#energy");
+  mask-size: 38px 52px;
+}
+
+.features__item--ecology::before {
+  mask-image: url("../../images/icons/stack.svg#ecology-background");
+  mask-size: 42px 52px;
+}
+
+.features__item--ecology::after {
+  mask-image: url("../../images/icons/stack.svg#ecology");
+  mask-size: 42px 52px;
+}

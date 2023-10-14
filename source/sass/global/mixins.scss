@@ -14,6 +14,24 @@
   line-height: 24px;
 }
 
+@mixin heading-text-big {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 64px;
+}
+
+@mixin heading-text-medium {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+@mixin heading-text-small {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+}
+
 @mixin link-text {
   font-size: 12px;
   line-height: 16px;
