@@ -1,6 +1,5 @@
 .hero {
   position: relative;
-  background-color: $flat-white;
 }
 
 .hero::after {
@@ -20,9 +19,8 @@
 }
 
 .hero__wrapper {
-  display: flex;
+  display: none;
   flex-direction: column-reverse;
-  background-color: $flat-white;
 
   @media (min-width: $tablet-width) {
     flex-direction: column;
@@ -31,6 +29,18 @@
   @media (min-width: $desktop-width) {
     flex-direction: row-reverse;
   }
+}
+
+.hero__wrapper--slider1 {
+  background-color: $flat-white;
+}
+
+.hero__wrapper--slider2 {
+  background-color: $lavender-latte;
+}
+
+.hero__wrapper--slider3 {
+  background-color: $espresso;
 }
 
 .hero__image {
@@ -88,4 +98,8 @@
 .hero__new-price {
   @include hero-text-description;
   font-weight: 600;
+}
+
+.hero__input:checked + .hero__wrapper {
+  display: flex;
 }

@@ -63,6 +63,16 @@
         <h1 class="visually-hidden">Drink2Go</h1>
         <section class="hero" data-test="hero">
           <h2 class="visually-hidden">Новинка.</h2>
+          <div class="slider-pagination">
+            <button class="hero__toggle slider-button-prev" type="button">
+              <span class="visually-hidden">Предыдущий слайд</span>
+            </button>
+            <button class="hero__toggle slider-button-next" type="button">
+              <span class="visually-hidden">Следующий слайд</span>
+            </button>
+          </div>
+
+          <input class="hero__input hero__input--slider1" type="radio" name="slider" id="slide1" checked>
           <div class="hero__wrapper hero__wrapper--slider1">
             <div class="hero__container">
               <p class="hero__badge">Новинка!</p>
@@ -72,7 +82,6 @@
               <span class="hero__new-price">225&#8381;</span>
               <button class="hero__button" type="button">Заказать</button>
             </div>
-
             <picture>
               <source type="image/webp" media="(min-width: 1440px)" srcset="images/hero/flat_white_desktop@1x.webp 1x, images/hero/flat_white_desktop@2x.webp 2x" width="600" height="600">
               <source type="image/webp" media="(min-width: 768px)" srcset="images/hero/flat_white_tablet@1x.webp 1x, images/hero/flat_white_tablet@2x.webp 2x" width="476" height="476">
@@ -83,6 +92,7 @@
             </picture>
           </div>
 
+          <input class="hero__input hero__input--slider2" type="radio" name="slider" id="slide2">
           <div class="hero__wrapper hero__wrapper--slider2">
             <div class="hero__container">
               <p class="hero__badge">Новинка!</p>
@@ -92,7 +102,6 @@
               <span class="hero__new-price">265&#8381;</span>
               <button class="hero__button" type="button">Заказать</button>
             </div>
-
             <picture>
               <source type="image/webp" media="(min-width: 1440px)" srcset="images/hero/lavender_desktop@1x.webp 1x, images/hero/lavender_desktop@2x.webp 2x" width="600" height="600">
               <source type="image/webp" media="(min-width: 768px)" srcset="images/hero/lavender_tablet@1x.webp 1x, images/hero/lavender_tablet@2x.webp 2x" width="476" height="476">
@@ -103,6 +112,7 @@
             </picture>
           </div>
 
+          <input class="hero__input hero__input--slider3" type="radio" name="slider" id="slide3">
           <div class="hero__wrapper hero__wrapper--slider3">
             <div class="hero__container">
               <p class="hero__badge">Новинка!</p>
@@ -112,7 +122,6 @@
               <span class="hero__new-price">375&#8381;</span>
               <button class="hero__button" type="button">Заказать</button>
             </div>
-
             <picture>
               <source type="image/webp" media="(min-width: 1440px)" srcset="images/hero/espresso_desktop@1x.webp 1x, images/hero/espresso_desktop@2x.webp 2x" width="600" height="600">
               <source type="image/webp" media="(min-width: 768px)" srcset="images/hero/espresso_tablet@1x.webp 1x, images/hero/espresso_tablet@2x.webp 2x" width="476" height="476">
@@ -122,6 +131,10 @@
               <img class="hero__image" src="images/hero/espresso_mobile@1x.png" srcset="images/hero/espresso_mobile@2x.png 2x" width="280" height="280" alt="Тройной Эспрессо.">
             </picture>
           </div>
+
+          <label class="hero__label" for="slide1"></label>
+          <label class="hero__label" for="slide2"></label>
+          <label class="hero__label" for="slide3"></label>
         </section>
 
         <section class="features" data-test="features">
