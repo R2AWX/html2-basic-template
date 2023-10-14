@@ -41,6 +41,7 @@
 .header__list {
   @include no-bullet;
   display: flex;
+  flex-wrap: wrap;
 
   @media (max-width: $mobile-width-only) {
     margin-right: 60px;

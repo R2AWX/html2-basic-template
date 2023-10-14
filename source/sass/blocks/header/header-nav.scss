@@ -44,6 +44,7 @@
 .header-nav__list {
   @include no-bullet;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 
   @media (max-width: $mobile-width-only) {

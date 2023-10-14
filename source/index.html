@@ -82,27 +82,30 @@
 
       <footer class="footer" data-test="footer">
         <div class="footer__logo-container">
-          <a class="footer__logo">
-            <picture>
-              <source media="(min-width: 768px)" srcset="images/logo/logo-drink2go.svg" width="170" height="36">
-              <img src="images/logo/logo-d2g.svg" width="82" height="36" alt="Drink2Go.">
-            </picture>
-          </a>
-          <span class="footer__text">Интернет-магазин кофейных напитков</span>
-          <div class="footer__social social">
+          <div class="footer__logo-wrapper">
+            <a class="footer__logo">
+              <picture>
+                <source media="(min-width: 768px)" srcset="images/logo/logo-drink2go.svg" width="170" height="36">
+                <img src="images/logo/logo-d2g.svg" width="82" height="36" alt="Drink2Go.">
+              </picture>
+            </a>
+            <span class="footer__text">Интернет-магазин кофейных напитков</span>
+          </div>
+
+          <div class="social">
             <ul class="social__list">
               <li class="social__item">
-                <a class="social__link" href="https://vk.com/htmlacademy">
+                <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
                   <span class="visually-hidden">Вконтакте</span>
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link" href="https://ru.pinterest.com/keks_is_html_academy">
+                <a class="social__link social__link--pinterest" href="https://ru.pinterest.com/keks_is_html_academy">
                   <span class="visually-hidden">Пинтерест</span>
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link" href="https://ok.ru/htmlacademy">
+                <a class="social__link social__link--ok" href="https://ok.ru/htmlacademy">
                   <span class="visually-hidden">Одноклассники</span>
                 </a>
               </li>
@@ -144,7 +147,7 @@
           </div>
           <div class="footer-nav__container">
             <h3 class="footer-nav__title">Контакты</h3>
-            <ul class="footer-nav__list">
+            <ul class="footer-nav__list footer-nav__list--icon">
               <li class="footer-nav__item">
                 <span class="footer-nav__icon footer-nav__icon--address">Санкт-Петербург, набережная реки Карповки, дом 5</span>
               </li>
@@ -155,7 +158,7 @@
           </div>
         </nav>
 
-        <p class="footer__developer">Разработано в <a class="footer__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></p>
+        <span class="footer__developer">Разработано в <a class="footer__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></span>
     </footer>
     </div>
 
