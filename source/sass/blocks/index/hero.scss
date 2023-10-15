@@ -24,6 +24,7 @@
   top: 0;
   bottom: 0;
   width: 20px;
+  border: none;
   background-color: transparent;
 
   @media (min-width: $tablet-width) {
@@ -38,32 +39,117 @@
 
 .hero__toggle--prev {
   left: 0;
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(to right, $base-white, transparent);
+  }
+
+  &:active {
+    background: linear-gradient(to right, $base-primary, transparent);
+  }
 }
 
 .hero__toggle--next {
   right: 0;
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(to left, $base-white, transparent);
+  }
+
+  &:active {
+    background: linear-gradient(to left, $base-primary, transparent);
+  }
 }
 
 .hero__toggle--disabled {
-  background-color: tomato;
+  &:hover,
+  &:focus,
+  &:active {
+    background: transparent;
+
+    &::after {
+      background-color: $base-grey;
+    }
+  }
+}
+
+.hero__toggle::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  background-color: $base-primary;
+  mask-image: url("../../images/icons/stack.svg#arrow");
+  mask-size: 20px 11px;
+}
+
+.hero__toggle--next::after {
+  transform: rotate(180deg);
 }
 
 .hero__input-container {
-  text-align: center;
+  display: flex;
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  height: 24px;
+  border: none;
+  padding: 0;
+  justify-content: center;
+  gap: 8px;
+
+  @media (max-width: $tablet-width-only) {
+    display: none;
+  }
+}
+
+.hero__label {
+  position: relative;
+  width: 62px;
+}
+
+.hero__mark {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  bottom: 10px;
+  left: 0;
+  background-color: $base-white;
+}
+
+.hero__label:hover .hero__mark,
+.hero__input:focus + .hero__mark {
+  background-color: $primary-opacity;
+}
+
+.hero__input:checked + .hero__mark {
+  background-color: $base-primary;
 }
 
 .hero__wrapper {
   display: flex;
   flex-direction: column-reverse;
-  padding: 0 20px;
+  padding: 20px 20px 60px;
+  gap: 10px;
 
   @media (min-width: $tablet-width) {
     flex-direction: column;
-    padding: 0 80px;
+    padding: 60px 80px 0;
+    gap: 20px;
   }
 
   @media (min-width: $desktop-width) {
     flex-direction: row-reverse;
+    padding: 30px 80px 84px;
+    gap: 30px;
   }
 }
 
@@ -79,8 +165,15 @@
   background-color: $espresso;
 }
 
-.hero__image {
+.hero__container {
+  @media (min-width: $desktop-width) {
+    padding-top: 150px;
+  }
+}
+
+.hero__image-wrapper {
   position: relative;
+  flex-shrink: 0;
   z-index: 1;
 }
 
@@ -91,6 +184,7 @@
   text-align: center;
   color: $base-primary;
   margin: 0;
+  margin-bottom: 4px;
 
   @media (min-width: $desktop-width) {
     text-align: start;
@@ -101,9 +195,11 @@
   @include hero-text-mobile;
   text-align: center;
   margin: 0;
+  margin-bottom: 10px;
 
   @media (min-width: $tablet-width) {
     @include hero-text-tablet;
+    margin-bottom: 16px;
   }
 
   @media (min-width: $desktop-width) {
@@ -114,6 +210,7 @@
 .hero__text {
   text-align: center;
   margin: 0;
+  margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     @include hero-text-description;
@@ -121,6 +218,16 @@
 
   @media (min-width: $desktop-width) {
     text-align: start;
+    margin-bottom: 40px;
+  }
+}
+
+.hero__price-wrapper {
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: $desktop-width) {
+    justify-content: start;
   }
 }
 
@@ -129,13 +236,15 @@
   font-size: 16px;
   text-decoration: line-through;
   color: $base-primary;
+  margin-right: 6px;
 }
 
 .hero__new-price {
   @include hero-text-description;
   font-weight: 600;
+  margin-right: 20px;
 }
 
-// .hero__input:checked + .hero__wrapper {
-//   display: flex;
-// }
+.hero__button {
+  @include button;
+}
