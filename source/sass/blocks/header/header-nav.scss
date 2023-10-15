@@ -44,7 +44,7 @@
 .header-nav__list {
   @include no-bullet;
   display: flex;
-  flex-wrap: wrap;
+
   align-items: center;
 
   @media (max-width: $mobile-width-only) {
@@ -54,6 +54,7 @@
 
   @media (min-width: $tablet-width) {
     min-height: 80px;
+    flex-wrap: wrap;
   }
 
   @media (min-width: $desktop-width) {
