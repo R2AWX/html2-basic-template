@@ -1,3 +1,143 @@
 .catalog {
   background-color: $lightest-grey;
+  padding: 50px 20px 44px;
+
+  @media (min-width: $tablet-width) {
+    padding: 80px 20px 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 40px 120px;
+  }
+}
+
+.catalog__title {
+  @include link-text;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: $base-primary;
+  margin: 0;
+}
+
+.catalog__slogan {
+  @include heading-text-medium;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    @include heading-text-big;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.catalog__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    gap: 40px;
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+}
+
+.catalog__filter-container {
+  flex-shrink: 0;
+}
+
+.catalog__card-container {
+  display: grid;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.catalog__card {
+  background-color: $base-white;
+  padding: 40px 20px 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 50px 30px 30px;
+  }
+}
+
+.catalog__image-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.catalog__price-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog__card-title {
+  @include heading-text-small;
+  margin: 0;
+  margin-bottom: 4px;
+
+  @media (min-width: $tablet-width) {
+    @include heading-text-medium;
+    margin-bottom: 10px;
+  }
+}
+
+.catalog__card-description {
+  @include regular-text;
+  margin: 0;
+  margin-bottom: 16px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.catalog__price {
+  @include price-text-description;
+  font-weight: 600;
+}
+
+.catalog__basket-button {
+  @include button;
+  position: relative;
+  padding-left: 46px;
+}
+
+.catalog__basket-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 20px;
+  margin: auto;
+  mask-position: left;
+  mask-repeat: no-repeat;
+  background-color: $base-white;
+  mask-image: url("../../images/icons/stack.svg#basket+");
+  mask-size: 20px 16px;
 }

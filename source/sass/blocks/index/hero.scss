@@ -25,6 +25,7 @@
   bottom: 0;
   width: 20px;
   border: none;
+  padding: 0;
   background-color: transparent;
 
   @media (min-width: $tablet-width) {
@@ -63,18 +64,6 @@
   }
 }
 
-.hero__toggle--disabled {
-  &:hover,
-  &:focus,
-  &:active {
-    background: transparent;
-
-    &::after {
-      background-color: $base-grey;
-    }
-  }
-}
-
 .hero__toggle::after {
   content: "";
   position: absolute;
@@ -87,11 +76,23 @@
   mask-repeat: no-repeat;
   background-color: $base-primary;
   mask-image: url("../../images/icons/stack.svg#arrow");
-  mask-size: 20px 11px;
+  mask-size: 11px 20px;
 }
 
 .hero__toggle--next::after {
   transform: rotate(180deg);
+}
+
+.hero__toggle--disabled {
+  &:hover,
+  &:focus,
+  &:active {
+    background: transparent;
+  }
+
+  &::after {
+    background-color: $base-grey;
+  }
 }
 
 .hero__input-container {
@@ -173,8 +174,14 @@
 
 .hero__image-wrapper {
   position: relative;
+  display: flex;
+  justify-content: center;
   flex-shrink: 0;
   z-index: 1;
+
+  @media (min-width: $desktop-width) {
+    padding-left: 25px;
+  }
 }
 
 .hero__badge {
@@ -213,7 +220,7 @@
   margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
-    @include hero-text-description;
+    @include price-text-description;
   }
 
   @media (min-width: $desktop-width) {
@@ -232,7 +239,7 @@
 }
 
 .hero__old-price {
-  @include hero-text-description;
+  @include price-text-description;
   font-size: 16px;
   text-decoration: line-through;
   color: $base-primary;
@@ -240,7 +247,7 @@
 }
 
 .hero__new-price {
-  @include hero-text-description;
+  @include price-text-description;
   font-weight: 600;
   margin-right: 20px;
 }
