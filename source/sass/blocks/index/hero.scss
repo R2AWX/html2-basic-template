@@ -1,3 +1,105 @@
 .hero {
+  position: relative;
+}
+
+.hero::after {
+  @media (min-width: $tablet-width) {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 188px;
+    background-color: $base-white;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.hero__wrapper {
+  display: none;
+  flex-direction: column-reverse;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: column;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row-reverse;
+  }
+}
+
+.hero__wrapper--slider1 {
   background-color: $flat-white;
+}
+
+.hero__wrapper--slider2 {
+  background-color: $lavender-latte;
+}
+
+.hero__wrapper--slider3 {
+  background-color: $espresso;
+}
+
+.hero__image {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__badge {
+  @include link-text;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: $base-primary;
+  margin: 0;
+
+  @media (min-width: $desktop-width) {
+    text-align: start;
+  }
+}
+
+.hero__title {
+  @include hero-text-mobile;
+  text-align: center;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    @include hero-text-tablet;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: start;
+  }
+}
+
+.hero__text {
+  text-align: center;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    @include hero-text-description;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: start;
+  }
+}
+
+.hero__old-price {
+  @include hero-text-description;
+  font-size: 16px;
+  text-decoration: line-through;
+  color: $base-primary;
+}
+
+.hero__new-price {
+  @include hero-text-description;
+  font-weight: 600;
+}
+
+.hero__input:checked + .hero__wrapper {
+  display: flex;
 }

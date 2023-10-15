@@ -41,6 +41,7 @@
 .header__list {
   @include no-bullet;
   display: flex;
+  flex-wrap: wrap;
 
   @media (max-width: $mobile-width-only) {
     margin-right: 60px;
@@ -106,8 +107,8 @@
   mask-size: 16px 16px;
 }
 
-.header__icon--union::before {
-  mask-image: url("../../images/icons/stack.svg#union");
+.header__icon--basket::before {
+  mask-image: url("../../images/icons/stack.svg#basket");
   mask-size: 16px 16px;
 }
 
