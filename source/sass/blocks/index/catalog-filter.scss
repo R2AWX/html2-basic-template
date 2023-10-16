@@ -1,0 +1,7 @@
+.catalog-filter {
+  flex-shrink: 0;
+
+  @media (min-width: $desktop-width) {
+    width: 318px;
+  }
+}

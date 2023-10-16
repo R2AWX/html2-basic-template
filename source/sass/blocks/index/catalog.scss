@@ -53,8 +53,45 @@
   }
 }
 
-.catalog__filter-container {
-  flex-shrink: 0;
+.catalog__select-container {
+  @include regular-text-tablet;
+  font-weight: 600;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+}
+
+.catalog__select-control {
+  font: inherit;
+  color: $base-primary;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 4px 30px 4px 10px;
+  background-color: transparent;
+  background-image: url(../../images/icons/stack.svg#arrow-small);
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px 6px;
+  appearance: none;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: $base-secondary;
+  }
+
+  &:active {
+    background-color: transparent;
+    background-image: url(../../images/icons/stack.svg#arrow-small-up);
+  }
 }
 
 .catalog__card-container {
@@ -74,9 +111,15 @@
 .catalog__card {
   background-color: $base-white;
   padding: 40px 20px 20px;
+  border-radius: 4px;
 
   @media (min-width: $tablet-width) {
     padding: 50px 30px 30px;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 5px 15px 0 $shadow;
   }
 }
 
@@ -140,4 +183,63 @@
   background-color: $base-white;
   mask-image: url("../../images/icons/stack.svg#basket+");
   mask-size: 20px 16px;
+}
+
+.catalog__pagination {
+  display: flex;
+  justify-content: right;
+  gap: 20px;
+}
+
+.catalog__pagination-button {
+  @include regular-text;
+  min-width: 40px;
+  min-height: 40px;
+  border: none;
+  border-radius: 4px;
+  color: $base-primary;
+  background-color: $base-white;
+}
+
+.catalog__pagination-button--active {
+  font-weight: 600;
+  color: $base-black;
+  background-color: transparent;
+}
+
+.catalog__pagination-button--nav {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    padding: 8px 20px;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .catalog__pagination-button--nav::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    background-color: $base-primary;
+    mask-image: url("../../images/icons/stack.svg#arrow-small");
+    mask-size: 10px 6px;
+  }
+
+  .catalog__pagination-button--prev::after {
+    transform: rotate(90deg);
+  }
+
+  .catalog__pagination-button--next::after {
+    transform: rotate(270deg);
+  }
+
+  .catalog__pagination-text {
+    display: none;
+  }
 }

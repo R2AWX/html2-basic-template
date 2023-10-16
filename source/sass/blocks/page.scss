@@ -20,7 +20,7 @@
   width: $mobile-width;
   color: $base-black;
   background-color: $base-white;
-  box-shadow: 0 0 15px $base-grey;
+  box-shadow: 0 0 15px $shadow;
 
   @media (min-width: $tablet-width) {
     @include regular-text-tablet;
