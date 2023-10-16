@@ -5,3 +5,51 @@
     width: 318px;
   }
 }
+
+.catalog-filter__container {
+  display: grid;
+  gap: 30px;
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.catalog-filter__button-container {
+  display: grid;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(2, min-content);
+    justify-content: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.catalog-filter_list {
+  @include no-bullet;
+}
+
+.catalog-filter__button {
+  @include button;
+}
+
+.catalog-filter__button--reset {
+  color: $base-primary;
+  background-color: $base-white;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $base-white;
+  }
+}

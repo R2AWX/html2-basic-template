@@ -69,6 +69,7 @@
 }
 
 .catalog__select-control {
+  width: 165px;
   font: inherit;
   color: $base-primary;
   border: none;
@@ -99,12 +100,12 @@
   gap: 20px;
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
