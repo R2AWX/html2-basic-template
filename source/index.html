@@ -8,8 +8,8 @@
     <link rel="preload" href="fonts/montserrat-medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/montserrat-semibold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/montserrat-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="vendor/nouislider.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <div class="page__wrapper">
@@ -188,8 +188,15 @@
           <div class="catalog__wrapper">
             <form class="catalog-filter" action="https://echo.htmlacademy.ru" method="post">
               <div class="catalog-filter__container">
-                <fieldset class="catalog-filter__group">
+                <fieldset class="catalog-filter__group range">
                   <legend class="catalog-filter__title">Цена</legend>
+                  <div class="range__container">
+                    <div class="range__slider-body"></div>
+                  </div>
+                  <div class="range__values">
+                    <input class="range__input range__input--min" type="number" placeholder="0">
+                    <input class="range__input range__input--max" type="number">
+                  </div>
                 </fieldset>
 
                 <fieldset class="catalog-filter__group">
