@@ -13,8 +13,7 @@
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
-    padding: 40px;
-    padding-bottom: 76px;
+    padding: 50px 40px 76px;
   }
 }
 
@@ -41,8 +40,8 @@
   padding: 2px 0;
 
   @media (min-width: $desktop-width) {
-    margin-top: -2px;
-    margin-bottom: 8px;
+    margin-top: -12px;
+    margin-bottom: 7px;
   }
 }
 

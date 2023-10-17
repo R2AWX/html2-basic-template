@@ -149,6 +149,7 @@
 
   @media (min-width: $desktop-width) {
     flex-direction: row-reverse;
+    justify-content: start;
     padding: 30px 80px 84px;
     gap: 30px;
   }
@@ -200,6 +201,7 @@
 
 .hero__title {
   @include hero-text-mobile;
+  letter-spacing: 1px;
   text-align: center;
   margin: 0;
   margin-bottom: 10px;
@@ -229,9 +231,16 @@
   }
 }
 
+.hero__br {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+}
+
 .hero__price-wrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
 
   @media (min-width: $desktop-width) {
     justify-content: start;
@@ -254,4 +263,5 @@
 
 .hero__button {
   @include button;
+  @include regular-text-tablet;
 }

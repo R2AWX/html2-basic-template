@@ -8,8 +8,8 @@
     <link rel="preload" href="fonts/montserrat-medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/montserrat-semibold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/montserrat-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="vendor/nouislider.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <div class="page__wrapper">
@@ -75,7 +75,7 @@
             <div class="hero__container">
               <p class="hero__badge">Новинка!</p>
               <h3 class="hero__title">Декаф Флэт Уайт</h3>
-              <p class="hero__text">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+              <p class="hero__text">Свежесваренный кофе без кофеина из Эфиопии<br class="hero__br"> с натуральным фермерским молоком — то, что нужно<br class="hero__br"> для расслабления после тяжёлого рабочего дня</p>
               <div class="hero__price-wrapper">
                 <span class="hero__old-price">295&#8381;</span>
                 <span class="hero__new-price">225&#8381;</span>
@@ -167,11 +167,11 @@
               <p class="features__item-text">Готовый напиток всегда под рукой — просто открой банку</p>
             </li>
             <li class="features__item features__item--fit">
-              <h3 class="features__item-header">Бодрость</h3>
+              <h3 class="features__item-header">Удобство</h3>
               <p class="features__item-text">Легко помещается и в карман,<br>и в маленькую сумочку</p>
             </li>
             <li class="features__item features__item--energy">
-              <h3 class="features__item-header">Удобство</h3>
+              <h3 class="features__item-header">Бодрость</h3>
               <p class="features__item-text">Сбалансированная доза кофеина даст мощный заряд энергии</p>
             </li>
             <li class="features__item features__item--ecology">
@@ -188,8 +188,15 @@
           <div class="catalog__wrapper">
             <form class="catalog-filter" action="https://echo.htmlacademy.ru" method="post">
               <div class="catalog-filter__container">
-                <fieldset class="catalog-filter__group">
+                <fieldset class="catalog-filter__group range">
                   <legend class="catalog-filter__title">Цена</legend>
+                  <div class="range__container">
+                    <div class="range__slider-body"></div>
+                  </div>
+                  <div class="range__values">
+                    <input class="range__input range__input--min" type="number" placeholder="0">
+                    <input class="range__input range__input--max" type="number">
+                  </div>
                 </fieldset>
 
                 <fieldset class="catalog-filter__group">
@@ -470,7 +477,7 @@
             </ul>
           </div>
           <div class="footer-nav__container">
-            <h3 class="footer-nav__title">Контакты</h3>
+            <h3 class="footer-nav__title footer-nav__title--contacts">Контакты</h3>
             <ul class="footer-nav__list footer-nav__list--icon">
               <li class="footer-nav__item">
                 <span class="footer-nav__icon footer-nav__icon--address">Санкт-Петербург, набережная реки Карповки, дом 5</span>

@@ -180,6 +180,7 @@
 
 .catalog-filter__button {
   @include button;
+  @include regular-text-tablet;
 }
 
 .catalog-filter__button--reset {
