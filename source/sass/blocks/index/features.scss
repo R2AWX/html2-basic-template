@@ -10,7 +10,7 @@
   }
 }
 
-.features__header {
+.features__title {
   @include link-text;
   font-weight: 700;
   text-transform: uppercase;
@@ -41,13 +41,13 @@
   row-gap: 32px;
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 30px;
     row-gap: 50px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
