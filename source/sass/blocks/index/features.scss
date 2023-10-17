@@ -17,6 +17,7 @@
   text-align: center;
   color: $base-primary;
   margin: 0;
+  margin-bottom: 4px;
 }
 
 .features__slogan {
@@ -72,10 +73,16 @@
 .features__item-header {
   @include heading-text-small;
   margin: 0;
+  margin-bottom: 4px;
 
   @media (min-width: $tablet-width) {
     @include heading-text-medium;
+    margin-bottom: 10px;
   }
+}
+
+.features__item-text {
+  margin: 0;
 }
 
 .features__item::before,

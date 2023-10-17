@@ -42,8 +42,12 @@
 .footer-nav__title {
   @include regular-text;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   color: $base-primary;
+}
+
+.footer-nav__title--contacts {
+  margin-bottom: 20px;
 }
 
 .footer-nav__list {

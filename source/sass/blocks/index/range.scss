@@ -28,6 +28,7 @@
 
 .range__input {
   @include regular-text-tablet;
+  font-family: inherit;
   font-weight: 500;
   width: 100%;
   height: 40px;
